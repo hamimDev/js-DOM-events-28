@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body id="my-alaka">
+    <h1 id="bare-2">
+        Exploring Event Bubble
+    </h1>
+    <section id="bare-1">
+        <Ul id="list-all">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Voluptates, exercitationem!</li>
+            <li id="item-3">Repudiandae, mollitia.</li>
+            <li id="item-4">Nam, ea?</li>
+            <li id="item-5">Voluptatibus, distinctio?</li>
+            <li id="item-6">Debitis, cum?</li>
+        </Ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('room');
+        })
+        document.getElementById('list-all').addEventListener('click', function(){
+            console.log('house');
+        })
+        document.getElementById('bare-1').addEventListener('click', function(){
+            console.log('bare-1');
+        })
+        document.getElementById('bare-2').addEventListener('click', function(){
+            console.log('bare-2');
+        })
+        document.getElementById('my-alaka').addEventListener('click', function(){
+            console.log('my-alaka');
+        })
+    </script>
+</body>
+</html>

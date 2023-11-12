@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js DOM Summary</title>
+</head>
+<body>
+    <h1>
+        final DOM events Handler
+    </h1>
+    <h2 id="hamim">
+        I am Jihad
+    </h2>
+    <button onclick="OneClick()">
+        One click
+    </button>
+    <button id="towClick">
+        Tow click
+    </button>
+    <br>
+    <h3 id="mainText">
+        default text
+    </h3>
+    <input type="text" id="inputFe">
+    <button id="btn-Update">
+        Update
+    </button>
+    <script>
+        function OneClick(){
+        const eid = document.getElementById('hamim');
+        eid.innerText = 'I am Hamim';
+        }
+        document.getElementById('towClick').addEventListener('click', function(){
+            const eid = document.getElementById('hamim');
+            eid.innerText = 'I am Noyon';
+        })
+
+        document.getElementById('btn-Update').addEventListener('click', function(){
+            const inputFiled = document.getElementById('inputFe');
+            const inputText = inputFiled.value;
+            const main = document.getElementById('mainText');
+            main.innerText=inputText;
+            inputFiled.value='';
+
+        })
+    </script>
+</body>
+</html>

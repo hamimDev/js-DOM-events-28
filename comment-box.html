@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+<body>
+    <h1>
+        Please add your comment
+    </h1>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corrupti, quo aliquam placeat velit quibusdam odio adipisci quis! Labore et nulla nesciunt repellendus provident aperiam in possimus officia molestiae? Vel, tempora doloribus. Neque voluptatem autem ab similique. Id corporis consequuntur in voluptatibus non hic impedit commodi amet, quidem placeat odio.
+        </p>
+        <p>
+            Tempore aut corporis nulla facere omnis mollitia in ex! Molestiae officia id quibusdam, ab vero dignissimos accusantium recusandae ad labore, ex illo minima minus non dolor exercitationem? Aspernatur nobis reprehenderit ex adipisci, nemo error ad alias exercitationem tenetur ea, et cum at corporis dolor modi quo sit odio delectus accusantium.
+        </p>
+        <p id="Comment-id">
+            Modi magnam id itaque. Esse minima ullam enim ipsum non commodi odio sapiente, et possimus rem perferendis natus corrupti quis voluptate eligendi animi. Excepturi minus facilis quo, odio harum aliquid, soluta consequuntur tempora nisi dicta optio tenetur ex commodi sit possimus explicabo. Praesentium tenetur fuga sed totam ipsa accusantium culpa!
+        </p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="05"></textarea>
+        <br>
+        <button id="new-btn">
+            Post
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('new-btn').addEventListener('click', function(){
+            const newCom = document.getElementById('new-comment');
+            const newComment = newCom.value;
+            const changeWrite = document.getElementById('Comment-id');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            changeWrite.appendChild(p);
+            newCom.value = '';
+        })
+    </script>
+</body>
+</html>
